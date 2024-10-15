@@ -1,0 +1,10 @@
+{%extends 'base.html'%} {%load crispy_forms_tags%} {%block content%}
+<div class='col-6 btn btn-px-3'>
+<h2>Make a Deposit</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Deposit</button>
+</form> 
+</div>
+{%endblock%}
